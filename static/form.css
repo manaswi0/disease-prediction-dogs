@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1E6BFF, #ffffff);;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs .nav-link {
+    font-weight: bold;
+    color: #555;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    border-top: 3px solid #007bff;
+    color: #007bff;
+}
+
+button {
+    border: none;
+    padding: 12px;
+    background-color: #4db8ff;
+    color: white;
+    font-size: 16px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}

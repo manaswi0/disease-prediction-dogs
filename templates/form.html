@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Disease Prediction Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/form.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Predict Dog Diseases</h2>
+
+        <div class="card p-4 mt-3">
+            <form method="POST" action="{{ url_for('predict') }}">
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade" id="basic-info">
+                        </div>
+                    <div class="tab-pane fade" id="health">
+                        </div>
+                    <div class="tab-pane fade show active" id="symptoms">
+                        <div class="row">
+                            {% for symptom in ['paralysis', 'discharge_eyes', 'keratosis', 'dehydration', 'sneezing', 'gagging', 'salivation', 'foaming', 'pica', 'jaundice', 'gums', 'ulcers'] %}
+                            <div class="col-md-6 mt-2">
+                                <label class="form-label">Does your dog have {{ symptom.replace('_', ' ').title() }}?</label><br>
+                                <input type="radio" name="{{ symptom }}" value="true"> Yes
+                                <input type="radio" name="{{ symptom }}" value="false" class="ms-2"> No
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="submit" id="predict-btn">Predict</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showTab(tabId) {
+        const tabTrigger = document.querySelector(`a[href="#${tabId}"]`);
+        const tab = new bootstrap.Tab(tabTrigger);
+        tab.show();
+    }
+</script>
+
+</body>
+</html>
+

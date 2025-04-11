@@ -1,0 +1,45 @@
+/* Fullscreen Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #1E6BFF, #ffffff); /* Blue to white gradient */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style for the Placeholder Image */
+.image-placeholder {
+    width: 100%;
+    height: 350px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888;
+}
+
+/* Button Hover Effect */
+.btn-light:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+    transition: 0.3s ease-in-out;
+}
+
+.image-container {
+    width: 100%;
+    height: 350px; /* Same height as the placeholder */
+    border-radius: 20px;
+    overflow: hidden; /* Ensures the image doesn’t overflow */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the box while keeping aspect ratio */
+}
